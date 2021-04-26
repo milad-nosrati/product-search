@@ -1,0 +1,26 @@
+body {
+    --payless-colour-primary: #C75532;
+    --payless-colour-light-orange: #FF8546;
+    --payless-colour-navy: #144D6A;
+    --payless-colour-pink: #A21A80;
+    --payless-colour-yellow: #FAAF40;
+    --payless-colour-navy: #172A45;
+    --payless-colour-grey-eee: #EEEEEE;
+    --payless-colour-grey-ccc: #CCCCCC;
+    --payless-colour-grey-999: #999999;
+    --payless-colour-grey-666: #666666;
+    --payless-colour-grey-333: #333333;
+    --transparent: rgba(255, 255,255, 0);
+
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    background-color: var(--payless-colour-grey-eee);
+    font-size: 14px;
+    color:var(--payless-colour-grey-333);
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    height: 100vh; 
+    max-height: 100vh;
+}
