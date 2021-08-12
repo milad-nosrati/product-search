@@ -1,6 +1,6 @@
 import React from 'react'
 import './CSS/Main.css';
-import API from '../../api';
+import API from '../../Auth/api';
 import { Container, Row, Col } from 'react-bootstrap';
 
 export default class Main extends React.Component {
@@ -90,7 +90,7 @@ export default class Main extends React.Component {
 
             <Container fluid id='main-wrapper' className="d-flex flex-column">
                 <Row className="justify-content-md-center">
-                    <Col id="main-container" >
+                    <Col id="main-container" xl={5} lg={6} md={8} sm={10}  xs={12}>
                         <Row className="d-flex flex-column">
                             <Row>
                                 <Col>
@@ -109,7 +109,7 @@ export default class Main extends React.Component {
                                 <Col md={4} xs={12}>
                                     <button id='main-search-button'
                                         type="button"
-                                        class="btn btn-primary"
+                                        className="btn btn-primary"
                                         onClick={this.handleSearch}>
                                         {this.state.loadingState ? 'Loading data..' : 'Search'}
                                     </button>
@@ -117,6 +117,7 @@ export default class Main extends React.Component {
                             </Row>
                             <Row>
                                 <Col id='loading' className={`${this.state.loadingState ? "Visible" : "Hidden"}`}>
+                                    <div class="loader"></div>
                                     <span className="loading-label">
                                         Waiting for the server response
                                     </span>
@@ -124,17 +125,17 @@ export default class Main extends React.Component {
                             </Row>
                         </Row>
 
-                        <Container className={`${this.state.displayResult ? "Visible" : "Hidden"}`}>
+                        <Container className={`${this.state.displayResult ? "Visible" : "Hidden"} p-0`}>
                             <Row>
-                                <Col md={3}>
+                                <Col md={2} xs={12}>
                                     <img src={this.state.imageSource}
                                         alt={this.state.imagesAlt}
                                         className="product-image" />
                                 </Col>
-                                <Col md={9}>
-                                    <p>
+                                <Col md={10} xs={12} className="text-left">
+                                    <p className="p-xs-0 p-m-1">
                                         <span className="results-label">
-                                            {'Payless: '}
+                                            Payless: 
                                         </span>
                                         <a href={this.state.products.permalink}
                                             target="_blank"
@@ -145,7 +146,7 @@ export default class Main extends React.Component {
                                     </p>
                                     <p>
                                         <span className="results-label">
-                                            {'Collection: '}
+                                            Collection:
                                         </span>
                                         <span className="results-result">
                                             {this.state.collection}
@@ -153,7 +154,7 @@ export default class Main extends React.Component {
                                     </p>
                                     <p>
                                         <span className="results-label">
-                                            {'Available Stock: '}
+                                            Available Stock: 
                                         </span>
                                         <span className="results-result">
                                             {this.state.products.stock_quantity}
@@ -161,13 +162,13 @@ export default class Main extends React.Component {
                                     </p>
                                     <p>
                                         <span className="results-label">
-                                            {'Sale Price: '}
+                                            Sale Price:
                                         </span>
                                         <span className="results-result">
                                             ${this.state.products.sale_price}
                                         </span>
                                         <span className="results-label">
-                                            {' | RRP: '}
+                                           | RRP:
                                         </span>
                                         <span className="results-result">
                                             ${this.state.products.regular_price}
@@ -177,8 +178,8 @@ export default class Main extends React.Component {
                                         <a href={this.state.ExtURL}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="results-result">
-                                            Visit the producty on {this.state.Unitex ? ' Unitex ' : " Saray "} website.
+                                            className="results-button">
+                                            Product on {this.state.Unitex ? ' Unitex ' : " Saray "} website
                                         </a>
                                     </p>
                                 </Col>
