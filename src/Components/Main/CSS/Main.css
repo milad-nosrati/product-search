@@ -72,6 +72,17 @@ button:focus , textarea:focus, input:focus{
     font-weight: 400;
     color: white;
 }
+#footer{
+    position: absolute;
+    top:100%;
+    transform: translateY(-100%);
+    width: 100%;
+    height: 1.4rem;
+    background-color: var(--payless-colour-grey-333);
+    color: var(--payless-colour-grey-ccc);
+    text-align: center;
+    font-size: 0.7rem;
+}
 
 /* Results */
 .Visible {
