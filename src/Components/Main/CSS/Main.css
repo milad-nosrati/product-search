@@ -6,6 +6,8 @@ body{
     --payless-colour-grey-999: #999999;
     --payless-colour-grey-666: #666666;
     --payless-colour-grey-333: #333333;
+    --payless-colour-white: #FFFFFF;
+    --payless-colour-black: #000000;
     --transparent: rgba(255, 255,255, 0);
 }
 *{
@@ -28,8 +30,8 @@ button:focus , textarea:focus, input:focus{
 }  
 #main-wrapper{
     min-width:100vw;
-    min-height: 100vh;;
-    background-image: url("../images/bg.jpg"); 
+    min-height: 100vh;
+    background-color: var(--payless-colour-grey-333);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -64,13 +66,12 @@ button:focus , textarea:focus, input:focus{
 
 #main-search-button{
     background-color: var(--payless-colour-primary);
-    color: white;
+    color: var(--payless-colour-white);
     border: 0;
     border-radius: 0.5rem;
     padding: 0.2rem 1.3rem;
     font-size: 0.8rem;
     font-weight: 400;
-    color: white;
 }
 #footer{
     position: absolute;
@@ -93,23 +94,23 @@ button:focus , textarea:focus, input:focus{
 }
 .loading-label{
     font-size: 0.8rem;
-    color: grey;
+    color: var(--payless-colour-grey-999);
 }
 .results-label{
     font-weight: 600;
     font-size: 1em;
-    color: grey;
+    color: var(--payless-colour-grey-999);
     padding-right: 0.5em;
 }
 .results-result{
     font-weight: 700;
     font-size: 1em;
-    color: black;
+    color: var(--payless-colour-black);
 }
 .results-link{
     font-weight: 700;
     font-size: 1em;
-    color: black;
+    color: var(--payless-colour-black);
 }
 .results-link:hover{
     font-weight: 700;
@@ -121,14 +122,14 @@ button:focus , textarea:focus, input:focus{
     font-weight: 400;
     font-size: 1em;
     background-color: var(--payless-colour-primary);
-    color: white;
+    color: var(--payless-colour-white);
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
     max-width: 100%;
 }
 .results-button:hover{
     font-size: 1em;
-    color: white;
+    color: var(--payless-colour-white);
     text-decoration: none;
     background-color: var(--payless-colour-secondary);
 }
@@ -144,7 +145,7 @@ button:focus , textarea:focus, input:focus{
 }
 
 .loader {
-    border: 0.2rem solid #f3f3f3; /* Light grey */
+    border: 0.2rem solid var(--payless-colour-grey-eee); /* Light grey */
     border-top: 0.2rem solid var(--payless-colour-primary); /* Blue */
     border-radius: 50%;
     width: 3rem;
